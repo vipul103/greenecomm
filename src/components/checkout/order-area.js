@@ -54,39 +54,76 @@ const OrderArea = ({
       </div>
 
       <div className="payment-method faq__wrapper tp-accordion">
-        <div className="accordion" id="checkoutAccordion">
-          <div className="accordion-item">
-            <h2 className="accordion-header" id="checkoutOne">
-              <button
-                className="accordion-button"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#bankOne"
-                aria-expanded="true"
-                aria-controls="bankOne"
-              >
-                Direct Bank Transfer
-                <span className="accordion-btn"></span>
-              </button>
-            </h2>
-            <div
-              id="bankOne"
-              className="accordion-collapse collapse show"
-              aria-labelledby="checkoutOne"
-              data-bs-parent="#checkoutAccordion"
-            >
-              <div className="accordion-body">
-                <PaymentCardElement
-                  stripe={stripe}
-                  cardError={error}
-                  cart_products={cart_products}
-                  isCheckoutSubmit={isCheckoutSubmit}
-                />
-              </div>
-            </div>
-          </div>
+  <div className="accordion" id="checkoutAccordion">
+    {/* Card Payment Option */}
+    <div className="accordion-item">
+      <h2 className="accordion-header" id="checkoutOne">
+        <button
+          className="accordion-button"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#bankOne"
+          aria-expanded="true"
+          aria-controls="bankOne"
+        >
+          Credit/Debit Card
+          <span className="accordion-btn"></span>
+        </button>
+      </h2>
+      <div
+        id="bankOne"
+        className="accordion-collapse collapse show"
+        aria-labelledby="checkoutOne"
+        data-bs-parent="#checkoutAccordion"
+      >
+        <div className="accordion-body">
+          <PaymentCardElement
+            stripe={stripe}
+            cardError={error}
+            cart_products={cart_products}
+            isCheckoutSubmit={isCheckoutSubmit}
+          />
         </div>
       </div>
+    </div>
+
+    {/* COD Option */}
+    <div className="accordion-item">
+      <h2 className="accordion-header" id="checkoutTwo">
+        <button
+          className="accordion-button collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#codOption"
+          aria-expanded="false"
+          aria-controls="codOption"
+        >
+          Cash on Delivery
+          <span className="accordion-btn"></span>
+        </button>
+      </h2>
+      <div
+        id="codOption"
+        className="accordion-collapse collapse"
+        aria-labelledby="checkoutTwo"
+        data-bs-parent="#checkoutAccordion"
+      >
+        <div className="accordion-body">
+  <p>Pay with cash when your order is delivered to your address.</p>
+  <button
+    type="button"
+    className="tp-btn w-100 mt-3"
+    onClick={() => handleCODOrder()}
+  >
+    Place Order (COD)
+  </button>
+</div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
     </div>
   );
 };

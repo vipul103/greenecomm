@@ -7,12 +7,15 @@ import ShopCategoryArea from "@components/shop-category/shop-category";
 import ShopProducts from "@components/products";
 import OfferPopularProduct from "@components/offer-product";
 import ShopBanner from "@components/shop-banner";
+import Battery from '@components/shop-feature/battery'
 import ShopFeature from "@components/shop-feature";
 import ShopCta from "@components/cta";
 import Footer from "@layout/footer";
+import Brands from "@components/brands";
+
 
 export const metadata = {
-  title: "Home - Harri Shop"
+  title: "Home - greenenergypowerco"
 };
 
 const HomeShop = () => {
@@ -21,11 +24,13 @@ const HomeShop = () => {
       <Header />
       <HeroBanner />
       <ShopCategoryArea />
+      <ShopFeature />
+      <Battery />
       <ShopProducts />
       <OfferPopularProduct />
-      <ShopBanner />
-      <ShopFeature />
       <ShopCta />
+      <Brands />
+      <ShopBanner />
       <Footer />
     </Wrapper>
   );

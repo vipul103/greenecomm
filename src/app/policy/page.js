@@ -5,7 +5,7 @@ import SectionTop from "@components/terms-policy/section-top-bar";
 import PolicyArea from "@components/terms-policy/policy-area";
 
 export const metadata = {
-  title: "Policy - Harri Shop",
+  title: "Policy - greenenergypowerco",
 };
 
 export default function Policy() {

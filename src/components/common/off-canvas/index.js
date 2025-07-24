@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 // internal
 import shape from "@assets/img/shape/offcanvas-shape-1.png";
-import logo from "@assets/img/logo/logo-black.svg";
+import logo from "@assets/img/logo/newlogo.png";
 import MobileMenus from "./mobile-menus";
 import SocialLinks from "@components/social";
 
@@ -43,9 +43,9 @@ const OffCanvas = ({ isOffCanvasOpen, setIsOffCanvasOpen }) => {
               </div>
             </div>
             <div className="offcanvas__btn">
-              <a href="#" className="tp-btn-offcanvas">
+              <Link  href="/shop" className="tp-btn-offcanvas">
                 Getting Started <i className="fa-regular fa-chevron-right"></i>
-              </a>
+              </Link>
             </div>
             <div className="offcanvas__social">
               <h3 className="offcanvas__social-title">Follow :</h3>
@@ -53,10 +53,10 @@ const OffCanvas = ({ isOffCanvasOpen, setIsOffCanvasOpen }) => {
             </div>
             <div className="offcanvas__contact">
               <p className="offcanvas__contact-call">
-                <a href="tel:+964-742-44-763">+964 742 44 763</a>
+                <a href="tel:+964-742-44-763">1300 685 958</a>
               </p>
               <p className="offcanvas__contact-mail">
-                <a href="mailto:info@harry.com">info@harry.com</a>
+                <a href="mailto:info@harry.com">Info@wecansave.com.au</a>
               </p>
             </div>
           </div>

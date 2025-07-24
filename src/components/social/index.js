@@ -2,28 +2,28 @@ import React from "react";
 
 const social_links = [
   {
-    link: "http://facebook.com",
+    link: "https://www.facebook.com/greenenergypowerco",
     target: "_blank",
     icon: "fa-brands fa-facebook-f",
     name: "Facebook",
   },
   {
-    link: "http://twitter.com",
+    link: "https://x.com/Greenenergy_au",
     target: "_blank",
     icon: "fa-brands fa-twitter",
     name: "Twitter",
   },
   {
-    link: "https://www.linkedin.com/",
+    link: "https://www.linkedin.com/company/green-energy-power-co/",
     target: "_blank",
     icon: "fa-brands fa-linkedin-in",
     name: "Linkedin",
   },
   {
-    link: "https://www.youtube.com/",
+    link: "https://www.instagram.com/greenenergypowerco.au/",
     target: "_blank",
-    icon: "fa-brands fa-youtube",
-    name: "Youtube",
+    icon: "fa-brands fa-instagram",
+    name: "Instagram",
   },
 ];
 

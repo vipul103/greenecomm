@@ -5,7 +5,7 @@ import Footer from "@layout/footer";
 import TermsArea from "@components/terms-policy/terms-area";
 
 export const metadata = {
-  title: "Terms & Conditions - Harri Shop",
+  title: "Terms & Conditions - greenenergypowerco",
 };
 
 export default function Terms() {

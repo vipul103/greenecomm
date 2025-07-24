@@ -1,5 +1,7 @@
 // internal
 import {Payment, Refund, ShippingCar, Support} from "@svg/index";
+import Image from 'next/image'
+
 
 // SingleFeature
 function SingleFeature({ icon, title, subtitle }) {

@@ -22,19 +22,14 @@ const TextArea = () => {
               data-wow-delay=".6s"
               data-wow-duration="1s"
             >
-              <p>
-                Ut at maximus magna. Vestibulum interdum sapien in facilisis
-                imperdiet. Pellentesque habitant morbi tristique senectus et
-                netus et malesuada fames ac turpis egestas. Proin ac placerat
-                risus. Nullam eget tortor felis. Nulla facilisi.Vestibulum
-                mattis diam non luctus elementum. Cras sollicitudin, nisi in
-                semper viverra, felis diam consequat mi, quis tincidunt ligula
-              </p>
+              <p> 
+              Established in 2023, Green Energy Power Co is a forward-thinking company dedicated to providing top-tier energy solutions for residents across Melbourne, Australia. Specializing in upgrading hot water and air conditioning systems, we are committed to enhancing energy efficiency and sustainability in everything we do.
 
-              <p>
-                Nam nibh diam, varius quis lectus eget, laoreet cursus metus.
-                morbi augue lectus, dapibus eget justo nec, consectetur auctor
-                nis luctus neque.!
+As a proud participant in the Victorian Energy Upgrades program, we help our customers significantly reduce their energy consumption and greenhouse gas emissions. By offering the latest in energy-efficient technology, our solutions not only lower utility costs but also contribute to a greener, more sustainable future by also educating citizens on how as an individual they can also contribute in saving the environment.
+
+Our team of experienced professionals is passionate about innovation and quality. We carefully select and install products that meet the highest standards of performance and environmental responsibility. Whether you’re looking to upgrade your hot water system or improve your air conditioning efficiency, we provide tailored solutions that fit your needs and budget.
+
+At the heart of our mission is a commitment to making energy efficiency accessible to everyone. We believe that through smart upgrades and sustainable practices, we can help create a better world for future generations. Join us on this journey towards a cleaner, more energy-efficient Australia.
               </p>
             </div>
           </div>

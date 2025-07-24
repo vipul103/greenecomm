@@ -1,6 +1,6 @@
 import Image from "next/image";
 // internal
-import location_icon_1 from "@assets/img/contact/contact-location-1.png";
+import location_icon_1 from "@assets/img/contact/contact-location-4.png";
 import location_icon_2 from "@assets/img/contact/contact-location-2.png";
 import location_icon_3 from "@assets/img/contact/contact-location-3.png";
 
@@ -31,7 +31,7 @@ function SingleLocationItem({ title, icon, location, tel }) {
           <div className="contact__location-btn text-sm-end">
             <a
               rel="noreferrer"
-              href="https://www.google.com/maps/place/102+Thompson+St,+New+York,+NY+10012,+USA/@40.7255437,-74.004061,17z/data=!3m1!4b1!4m5!3m4!1s0x89c2598c338f691d:0x6d5f394e7a1962cc!8m2!3d40.7255397!4d-74.0018723"
+              href="https://www.google.com/maps/place/1333+North+Rd,+Huntingdale+VIC+3166,+Australia/@-37.9118485,145.1040268,857m/data=!3m2!1e3!4b1!4m6!3m5!1s0x6ad66ae4394ee21f:0x533d95a5ebbbcd14!8m2!3d-37.9118528!4d145.1088977!16s%2Fg%2F11c22npfbk?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D"
               target="_blank"
               className="tp-btn-border"
             >
@@ -55,7 +55,7 @@ const LocationArea = () => {
                 LOCATIONS
               </span>
               <h3 className="tp-section-title-2 font-40">
-                Come and visit our offices around the world
+                Come and visit our Warehouse around the world
               </h3>
             </div>
           </div>
@@ -64,22 +64,10 @@ const LocationArea = () => {
           <div className="col-xl-10 ">
             <div className="contact__location-wrapper">
               <SingleLocationItem
-                title="Australia Office"
+                title="Australia Warehouse"
                 icon={location_icon_1}
-                location="contact.location@website.com"
-                tel="686-324-6838"
-              />
-              <SingleLocationItem
-                title="San Francisco Office"
-                icon={location_icon_2}
-                location="contact.location@website.com"
-                tel="686-324-6810"
-              />
-              <SingleLocationItem
-                title="Egpyt Office"
-                icon={location_icon_3}
-                location="contact.location@website.com"
-                tel="786-324-6810"
+                location="support@greenenergypowerco.com"
+                tel="1300785436"
               />
             </div>
           </div>

@@ -15,7 +15,7 @@ const About = () => {
         subtitle="About us"
         title={
           <>
-            Welcome to our <br /> Harri Shop
+            Welcome to <br /> GREEN ENERGY POWER CO
           </>
         }
       />
@@ -23,8 +23,8 @@ const About = () => {
       <Services />
       <AboutGallery />
       <Awards />
-      <AboutFaqs />
-      <Teams />
+      {/* <AboutFaqs /> */}
+      {/* <Teams /> */}
       <Brands />
     </>
   );

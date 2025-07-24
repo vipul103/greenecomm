@@ -1,7 +1,7 @@
 import SearchAreaMain from "@components/search-area";
 
 export const metadata = {
-  title: "Search Product - Harri Shop",
+  title: "Search Product - greenenergypowerco",
 };
 
 export default function SearchPage({searchParams:{query}}) {

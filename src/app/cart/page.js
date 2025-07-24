@@ -6,7 +6,7 @@ import CartArea from "@components/cart/cart-area";
 import ShopCta from "@components/cta";
 
 export const metadata = {
-  title: "Cart - Harri Shop",
+  title: "Cart - greenenergypowerco",
 };
 
 export default function Cart() {

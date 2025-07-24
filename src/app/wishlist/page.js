@@ -6,7 +6,7 @@ import ShopCta from "@components/cta";
 import WishlistArea from "@components/wishlist/wishlist-area";
 
 export const metadata = {
-  title: "Wishlist - Harri Shop",
+  title: "Wishlist - greenenergypowerco",
 };
 
 export default function Wishlist() {

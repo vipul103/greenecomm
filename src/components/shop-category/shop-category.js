@@ -1,7 +1,10 @@
 'use client';
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Scrollbar } from "swiper";
+import { Scrollbar } from "swiper/modules"; 
+import "swiper/css";
+import "swiper/css/scrollbar";
+
 // internal
 import SingleCategory from "./single-category";
 import ErrorMessage from "@components/error-message/error";
@@ -12,33 +15,31 @@ const ShopCategoryArea = () => {
   const [loop, setLoop] = useState(false);
   useEffect(() => setLoop(true), []);
   const { data: categories, isLoading, isError } = useGetCategoriesQuery();
+
   // decide what to render
   let content = null;
-
   if (isLoading) {
-    content = (
-      <CategoryLoader loading={isLoading} />
-    );
-  }
-
-  if (!isLoading && isError) {
+    content = <CategoryLoader loading={isLoading} />;
+  } else if (isError) {
     content = <ErrorMessage message="There was an error" />;
-  }
-
-  if (!isLoading && !isError && categories?.categories?.length === 0) {
+  } else if (categories?.categories?.length === 0) {
     content = <ErrorMessage message="No Category found!" />;
-  }
-
-  if (!isLoading && !isError && categories?.categories?.length > 0) {
+  } else if (categories?.categories?.length > 0) {
     content = categories.categories.map((item, i) => (
       <SwiperSlide key={i}>
         <SingleCategory item={item} />
       </SwiperSlide>
     ));
   }
+
   return (
-    <section className="product__category pt-100 pb-100">
+    <section className="product__category pt-40 pb-100">
       <div className="container">
+        {/* Heading outside the slider, closer to top */}
+        <h2 className="text-center text-xl sm:text-2xl md:text-3xl font-semibold mb-2">
+          OUR PRODUCTS
+        </h2>
+
         <div className="row">
           <div className="col-xxl-12">
             <div className="product__category-slider">
@@ -53,29 +54,13 @@ const ShopCategoryArea = () => {
                   clickable: true,
                 }}
                 breakpoints={{
-                  1601: {
-                    slidesPerView: 4,
-                  },
-                  1400: {
-                    slidesPerView: 4,
-                  },
-                  1200: {
-                    slidesPerView: 4,
-                  },
-                  992: {
-                    slidesPerView: 3,
-                  },
-                  768: {
-                    slidesPerView: 2,
-                  },
-                  576: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
-                  },
-                  0: {
-                    slidesPerView: 1,
-                    spaceBetween: 0,
-                  },
+                  1601: { slidesPerView: 4 },
+                  1400: { slidesPerView: 4 },
+                  1200: { slidesPerView: 4 },
+                  992: { slidesPerView: 3 },
+                  768: { slidesPerView: 2 },
+                  576: { slidesPerView: 2, spaceBetween: 20 },
+                  0: { slidesPerView: 1, spaceBetween: 0 },
                 }}
               >
                 {content}

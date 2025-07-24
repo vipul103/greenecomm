@@ -111,27 +111,27 @@ const FaqArea = ({ element_faq = false }) => {
                     accordions: [
                       {
                         id: "One",
-                        title: "Global search engine optimization",
+                        title: "what services do you offer",
                         show: true,
-                        desc: "A startup or start-up is started by individual founders or entrepreneurs to search for a repeatable and scalable business model. A startup or start-up is started by individual founders",
+                        desc: "we offer energy efficint upgrades for residential hot water system and heating and cooling system (aircon)",
                         parent: "general-1_accordion",
                       },
                       {
                         id: "Two",
-                        title: " Complete Social Media Integration",
-                        desc: "A startup or start-up is started by individual founders or entrepreneurs to search for a repeatable and scalable business model. A startup or start-up is started by individual founders",
+                        title: " how can i benefit from your services",
+                        desc: "we do thorough assessment of one's site and as per the requirement that we tailor a plan for them",
                         parent: "general-1_accordion",
                       },
                       {
                         id: "Three",
-                        title: "Branding Strategy for startups",
-                        desc: "A startup or start-up is started by individual founders or entrepreneurs to search for a repeatable and scalable business model. A startup or start-up is started by individual founders",
+                        title: "how do i know if i am eligible?",
+                        desc: "Eligibility depends on the specific government scheme and the products you need. Contact us (1300 785 436) for a detailed assessment.",
                         parent: "general-1_accordion",
                       },
                       {
                         id: "four",
-                        title: "How long do I get support & updates?",
-                        desc: "A startup or start-up is started by individual founders or entrepreneurs to search for a repeatable and scalable business model. A startup or start-up is started by individual founders",
+                        title: "How do i started?",
+                        desc: "You can get started by requesting a free quote through our website, and our professional team will guide you through the process.",
                         parent: "general-1_accordion",
                       },
                     ],
@@ -145,9 +145,9 @@ const FaqArea = ({ element_faq = false }) => {
                     accordions: [
                       {
                         id: "five",
-                        title: "How do I know my package has shipped?",
+                        title: "How do I schedule an install?",
                         show: true,
-                        desc: "A startup or start-up is started by individual founders or entrepreneurs to search for a repeatable and scalable business model. A startup or start-up is started by individual founders",
+                        desc: "You can schedule an installation by contacting us (1300 785 436) through our website or calling our customer service team.",
                         parent: "general-2_accordion",
                       },
                       {

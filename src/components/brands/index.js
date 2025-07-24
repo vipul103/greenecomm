@@ -12,8 +12,17 @@ import brand_5 from "@assets/img/brand/brand-5.png";
 import brand_6 from "@assets/img/brand/brand-6.png";
 import brand_7 from "@assets/img/brand/brand-7.png";
 import brand_8 from "@assets/img/brand/brand-8.png";
-
-// slider setting 1
+import brand_17 from "@assets/img/brand/brand-17.png";
+import brand_18 from "@assets/img/brand/brand-18.png";
+import brand_19 from "@assets/img/brand/brand-19.png";
+import brand_20 from "@assets/img/brand/brand-20.png";
+import brand_21 from "@assets/img/brand/brand-21.png";
+import brand_22 from "@assets/img/brand/brand-22.png";
+import brand_23 from "@assets/img/brand/brand-23.png";
+import brand_24 from "@assets/img/brand/brand-24.png";
+import brand_25 from "@assets/img/brand/brand-25.png";
+import brand_26 from "@assets/img/brand/brand-26.png";
+// slider settings
 const settings_1 = {
   speed: 4000,
   autoplay: true,
@@ -43,24 +52,28 @@ const settings_2 = {
 
 // data
 const brand_1_data = [
-  { brand: brand_1 },
-  { brand: brand_2 },
-  { brand: brand_3 },
-  { brand: brand_4 },
-  { brand: brand_5 },
-  { brand: brand_6 },
-  { brand: brand_7 },
-  { brand: brand_8 },
+  { brand: brand_17 },
+  { brand: brand_18 },
+  { brand: brand_19 },
+  { brand: brand_20 },
+  { brand: brand_21 },
+  { brand: brand_22 },
+  { brand: brand_23 },
+  { brand: brand_24 },
+  { brand: brand_25 },
+  { brand: brand_26 },
 ];
+
 const brand_2_data = [
-  { brand: brand_1 },
-  { brand: brand_3 },
-  { brand: brand_6 },
-  { brand: brand_5 },
-  { brand: brand_8 },
-  { brand: brand_2 },
-  { brand: brand_7 },
-  { brand: brand_4 },
+  { brand: brand_17 },
+  { brand: brand_18 },
+  { brand: brand_19 },
+  { brand: brand_20 },
+  { brand: brand_21 },
+  { brand: brand_22 },
+  { brand: brand_23 },
+  { brand: brand_24 },
+  { brand: brand_26 },
 ];
 
 const Brands = () => {
@@ -76,10 +89,8 @@ const Brands = () => {
 
   return (
     <>
-      <section
-        className={`brand__area pb-120`}
-      >
-        <div className="container-fluid g-0">
+      <section className={`brand__area pb-120`}>
+        <div className="container-fluid g-0 ">
           <div className="row gx-0 gy-2">
             <div className="col-xxl-12">
               <div className={`brand__slider-5`}>
@@ -87,7 +98,13 @@ const Brands = () => {
                   <Slider {...settings_1} className="brand__slider-active-5">
                     {brand_1_data.map((brand, i) => (
                       <div key={i} className="brand__item-5">
-                        <Image src={brand.brand} alt="brand" />
+                        <Image
+                          src={brand.brand}
+                          alt="brand"
+                          width={120} // Fixed width
+                          height={60} // Fixed height
+                          style={{ objectFit: "contain" }} // Ensure proper scaling
+                        />
                       </div>
                     ))}
                   </Slider>
@@ -104,7 +121,13 @@ const Brands = () => {
                   >
                     {brand_2_data.map((brand, i) => (
                       <div key={i} className="brand__item-5">
-                        <Image src={brand.brand} alt="brand" />
+                        <Image
+                          src={brand.brand}
+                          alt="brand"
+                          width={120} // Fixed width
+                          height={60} // Fixed height
+                          style={{ objectFit: "contain" }} // Ensure proper scaling
+                        />
                       </div>
                     ))}
                   </Slider>
