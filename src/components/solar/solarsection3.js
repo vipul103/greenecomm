@@ -16,6 +16,8 @@ const SolarVPPSection = () => {
     gridTemplateColumns: '1fr 1fr',
     alignItems: 'center',
     gap: '40px',
+    width: '100%',
+    boxSizing: 'border-box',
   };
 
   const smallHeadingStyle = {
@@ -29,7 +31,7 @@ const SolarVPPSection = () => {
   const titleStyle = {
     fontSize: '32px',
     fontWeight: 700,
-    color: '#050505ff',
+    color: '#050505',
     marginBottom: '24px',
     lineHeight: 1.3,
   };
@@ -50,17 +52,49 @@ const SolarVPPSection = () => {
 
   return (
     <section style={sectionStyle}>
-      <h3 style={smallHeadingStyle}>
-        join the solar family now
-      </h3>
-      <div style={containerStyle}>
+      <style jsx>{`
+        @media (max-width: 1024px) {
+          .vpp-container {
+            grid-template-columns: 1fr !important;
+            text-align: center;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .vpp-container {
+            gap: 24px !important;
+            padding: 40px 16px !important;
+          }
+
+          h2 {
+            font-size: 26px !important;
+          }
+
+          h3 {
+            font-size: 16px !important;
+            margin-bottom: 40px !important;
+          }
+
+          p,
+          a {
+            font-size: 15px !important;
+          }
+        }
+
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      `}</style>
+
+      <h3 style={smallHeadingStyle}>join the solar family now</h3>
+
+      <div className="vpp-container" style={containerStyle}>
         {/* Left Side */}
         <div>
-          <h2 style={titleStyle}>
-            Connect your home with solar battery
-          </h2>
+          <h2 style={titleStyle}>Connect your home with solar battery</h2>
           <p style={textStyle}>
-            inquire with us now and enjoy <strong>goverment rebate</strong>, now’s a great time to join our
+            Inquire with us now and enjoy <strong>government rebate</strong>, now’s a great time to join our
             network of connected home solar and battery systems.
           </p>
           <a href="#" style={linkStyle}>
@@ -71,11 +105,11 @@ const SolarVPPSection = () => {
         {/* Right Side */}
         <div style={{ textAlign: 'center' }}>
           <Image
-            src="/assets/img/shape/home.png" // replace with your actual image path
+            src="/assets/img/shape/home.png"
             alt="Virtual Power Plant Illustration"
             width={400}
             height={300}
-            style={{ objectFit: 'contain' }}
+            style={{ objectFit: 'contain', maxWidth: '100%' }}
           />
         </div>
       </div>

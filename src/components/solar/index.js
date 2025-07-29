@@ -1,12 +1,55 @@
 'use client';
-
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import React from 'react';
+
 import heroBg from '@assets/img/banner/bg2.jpg';
 import Solarsection1 from "@components/solar/solarsection1";
 import Solarsection2 from "@components/solar/solarsection2";
 import Solarsection3 from "@components/solar/solarsection3";
+
+export default function SolarPlansPage() {
+  const [isMobile, setIsMobile] = useState(false);
+
+ useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    handleResize(); // Set initially
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const layoutStyle = {
+    maxWidth: '1200px',
+    margin: '0 auto',
+    padding: '0 20px',
+    display: 'grid',
+    gridTemplateColumns: isMobile ? '1fr' : '1fr 1fr',
+    gap: '40px',
+    alignItems: 'center',
+  };
+
+  const imageStyle = {
+    width: '100%',
+    height: 'auto',
+    maxWidth: '500px',
+    borderRadius: '8px',
+  };
+
+  const headingStyle = {
+    fontSize: '1.5rem',
+    fontWeight: '600',
+    marginBottom: '1rem',
+  };
+
+  const paragraphStyle = {
+    marginBottom: '1rem',
+    fontWeight: 500,
+  };
+
+  const listStyle = {
+    listStyle: 'decimal inside',
+    lineHeight: '1.8',
+  };
 
 const plans = [
   {
@@ -41,7 +84,7 @@ const plans = [
   },
 ];
 
-export default function SolarPlansPage() {
+
   return (
     <main style={{ fontFamily: 'sans-serif' }}>
       {/* Hero Section */}
@@ -70,197 +113,114 @@ export default function SolarPlansPage() {
 
       {/* Why Solar Section */}
   
-       <section style={{ paddingTop: '80px' }}>
-  <div
-    style={{
-      maxWidth: '1200px',
-      margin: '0 auto',
-      padding: '0 20px',
-      display: 'grid',
-      gridTemplateColumns: '1fr 1fr',
-      gap: '40px',
-      alignItems: 'center',
-    }}
-  >
-    {/* Left - Image */}
-    <Image
-      src="/assets/img/photos/alfha.jpg"
-      alt="Solar Panels"
-      width={500}
-      height={400}
-      style={{
-        width: '100%',
-        height: 'auto',
-        maxWidth: '500px',
-        borderRadius: '8px',
-      }}
-    />
+        <section style={{ paddingTop: '80px' }}>
+        <div style={layoutStyle}>
+          <Image
+            src="/assets/img/photos/alfha.jpg"
+            alt="Solar Panels"
+            width={500}
+            height={400}
+            style={imageStyle}
+          />
+          <div>
+            <h3 style={headingStyle}>
+              Why Install Solar Panels Under the Victorian Energy Upgrade Program?
+            </h3>
+            <p style={paragraphStyle}>
+              1. <strong>Significant Cost Savings:</strong><br />
+              Get rebates, reduce upfront costs, and start saving from day one.
+            </p>
+            <p style={paragraphStyle}>
+              2. <strong>Environmental Impact:</strong><br />
+              Cut down on fossil fuels and your carbon footprint.
+            </p>
+            <p style={paragraphStyle}>
+              3. <strong>Increased Home Value:</strong><br />
+              A solar-powered home is an investment and attracts buyers.
+            </p>
+          </div>
+        </div>
+      </section>
 
-    {/* Right - Text */}
-    <div>
-      <h3 style={{ fontSize: '1.5rem', fontWeight: '600', marginBottom: '1rem' }}>
-        Why Install Solar Panels Under the Victorian Energy Upgrade Program?
-      </h3>
-      <p style={{ marginBottom: '1rem', fontWeight: 500 }}>
-        1. <strong>Significant Cost Savings:</strong>
-        <br />
-        Get rebates, reduce upfront costs, and start saving from day one.
-      </p>
-      <p style={{ marginBottom: '1rem', fontWeight: 500 }}>
-        2. <strong>Environmental Impact:</strong>
-        <br />
-        Cut down on fossil fuels and your carbon footprint.
-      </p>
-      <p style={{ marginBottom: '1rem', fontWeight: 500 }}>
-        3. <strong>Increased Home Value:</strong>
-        <br />
-        A solar-powered home is an investment and attracts buyers.
-      </p>
-    </div>
-  </div>
-</section>
+      {/* Section 2 - Installation Process */}
+      <section style={{ paddingTop: '80px', paddingBottom: '40px' }}>
+        <div style={layoutStyle}>
+          <div>
+            <h3 style={headingStyle}>Process to Install Solar Panels</h3>
+            <ol style={listStyle}>
+              <li><strong>Eligibility Check:</strong> Confirm if your property qualifies.</li>
+              <li><strong>Site Assessment:</strong> Schedule a consultation and system design.</li>
+              <li><strong>Quote and Rebate:</strong> Review costs and apply rebates.</li>
+              <li><strong>Installation:</strong> Licensed experts install your system.</li>
+              <li><strong>Inspection & Grid Connection:</strong> Final safety checks and connection.</li>
+              <li><strong>Handover:</strong> Receive all documentation and manuals.</li>
+              <li><strong>Monitor & Maintain:</strong> Track performance and schedule maintenance.</li>
+            </ol>
+          </div>
+          <Image
+            src="/assets/img/photos/solar_image1.png"
+            alt="Process"
+            width={500}
+            height={400}
+            style={imageStyle}
+          />
+        </div>
+      </section>
 
+      {/* Section 3 - Solar Batteries */}
+      <section style={{ paddingTop: '80px' }}>
+        <div style={layoutStyle}>
+          <Image
+            src="/assets/img/photos/growattbattery.png"
+            alt="Solar Batteries"
+            width={500}
+            height={400}
+            style={imageStyle}
+          />
+          <div>
+            <h3 style={headingStyle}>
+              Why Install Solar Batteries Under the Victorian Energy Upgrade Program?
+            </h3>
+            <p style={paragraphStyle}>
+              1. <strong>Energy Independence:</strong><br />
+              Store solar energy and reduce reliance on the grid.
+            </p>
+            <p style={paragraphStyle}>
+              2. <strong>Lower Energy Bills:</strong><br />
+              Use stored energy during peak times and avoid high tariffs.
+            </p>
+            <p style={paragraphStyle}>
+              3. <strong>Backup During Outages:</strong><br />
+              Ensure uninterrupted power supply during blackouts.
+            </p>
+          </div>
+        </div>
+      </section>
 
-      {/* Installation Process */}
-     <section style={{ paddingTop: '80px', paddingBottom: '40px' }}>
-  <div
-    style={{
-      maxWidth: '1200px',
-      margin: '0 auto',
-      padding: '0 20px',
-      display: 'grid',
-      gridTemplateColumns: '1fr 1fr',
-      gap: '40px',
-      alignItems: 'center',
-    }}
-  >
-    {/* Left - Text */}
-    <div>
-      <h3 style={{ fontSize: '1.5rem', fontWeight: '600', marginBottom: '1rem' }}>
-        Process to Install Solar Panels
-      </h3>
-      <ol style={{ listStyle: 'decimal inside', lineHeight: '1.8' }}>
-        <li><strong>Eligibility Check:</strong> Confirm if your property qualifies.</li>
-        <li><strong>Site Assessment:</strong> Schedule a consultation and system design.</li>
-        <li><strong>Quote and Rebate:</strong> Review costs and apply rebates.</li>
-        <li><strong>Installation:</strong> Licensed experts install your system.</li>
-        <li><strong>Inspection & Grid Connection:</strong> Final safety checks and connection.</li>
-        <li><strong>Handover:</strong> Receive all documentation and manuals.</li>
-        <li><strong>Monitor & Maintain:</strong> Track performance and schedule maintenance.</li>
-      </ol>
-    </div>
-
-    {/* Right - Image */}
-    <Image
-      src="/assets/img/photos/solar_image1.png"
-      alt="Process"
-      width={500}
-      height={400}
-      style={{
-        width: '100%',
-        height: 'auto',
-        maxWidth: '500px',
-        borderRadius: '8px',
-      }}
-    />
-  </div>
-</section>
-{/* Solar Battery Section */}
-<section style={{ paddingTop: '80px' }}>
-  <div
-    style={{
-      maxWidth: '1200px',
-      margin: '0 auto',
-      padding: '0 20px',
-      display: 'grid',
-      gridTemplateColumns: '1fr 1fr',
-      gap: '40px',
-      alignItems: 'center',
-    }}
-  >
-    {/* Left - Image */}
-    <Image
-      src="/assets/img/photos/growattbattery.png" // Make sure this image exists in your public folder
-      alt="Solar Batteries"
-      width={500}
-      height={400}
-      style={{
-        width: '100%',
-        height: 'auto',
-        maxWidth: '500px',
-        borderRadius: '8px',
-      }}
-    />
-
-    {/* Right - Text */}
-    <div>
-      <h3 style={{ fontSize: '1.5rem', fontWeight: '600', marginBottom: '1rem' }}>
-        Why Install Solar Batteries Under the Victorian Energy Upgrade Program?
-      </h3>
-      <p style={{ marginBottom: '1rem', fontWeight: 500 }}>
-        1. <strong>Energy Independence:</strong>
-        <br />
-        Store solar energy and reduce reliance on the grid.
-      </p>
-      <p style={{ marginBottom: '1rem', fontWeight: 500 }}>
-        2. <strong>Lower Energy Bills:</strong>
-        <br />
-        Use stored energy during peak times and avoid high tariffs.
-      </p>
-      <p style={{ marginBottom: '1rem', fontWeight: 500 }}>
-        3. <strong>Backup During Outages:</strong>
-        <br />
-        Ensure uninterrupted power supply during blackouts.
-      </p>
-    </div>
-  </div>
-</section>
-
-{/* Battery Installation Process */}
-<section style={{ paddingTop: '80px', paddingBottom: '40px' }}>
-  <div
-    style={{
-      maxWidth: '1200px',
-      margin: '0 auto',
-      padding: '0 20px',
-      display: 'grid',
-      gridTemplateColumns: '1fr 1fr',
-      gap: '40px',
-      alignItems: 'center',
-    }}
-  >
-    {/* Left - Text */}
-    <div>
-      <h3 style={{ fontSize: '1.5rem', fontWeight: '600', marginBottom: '1rem' }}>
-        Process to Install Solar Batteries
-      </h3>
-      <ol style={{ listStyle: 'decimal inside', lineHeight: '1.8' }}>
-        <li><strong>Eligibility Assessment:</strong> Check battery compatibility with your solar system.</li>
-        <li><strong>Site Inspection:</strong> Evaluate property and battery placement.</li>
-        <li><strong>Rebate Application:</strong> Apply for available battery rebates.</li>
-        <li><strong>Professional Installation:</strong> Battery installed by certified technicians.</li>
-        <li><strong>Testing & Commissioning:</strong> Verify performance and safety compliance.</li>
-        <li><strong>System Handover:</strong> Get user guide and documents for your battery.</li>
-        <li><strong>Ongoing Monitoring:</strong> Track battery efficiency and schedule service.</li>
-      </ol>
-    </div>
-
-    {/* Right - Image */}
-    <Image
-      src="/assets/img/photos/installation.png" // Make sure this image exists too
-      alt="Battery Installation Process"
-      width={500}
-      height={400}
-      style={{
-        width: '100%',
-        height: 'auto',
-        maxWidth: '500px',
-        borderRadius: '8px',
-      }}
-    />
-  </div>
-</section>
-
+      {/* Section 4 - Battery Installation */}
+      <section style={{ paddingTop: '80px', paddingBottom: '40px' }}>
+        <div style={layoutStyle}>
+          <div>
+            <h3 style={headingStyle}>Process to Install Solar Batteries</h3>
+            <ol style={listStyle}>
+              <li><strong>Eligibility Assessment:</strong> Check battery compatibility with your solar system.</li>
+              <li><strong>Site Inspection:</strong> Evaluate property and battery placement.</li>
+              <li><strong>Rebate Application:</strong> Apply for available battery rebates.</li>
+              <li><strong>Professional Installation:</strong> Battery installed by certified technicians.</li>
+              <li><strong>Testing & Commissioning:</strong> Verify performance and safety compliance.</li>
+              <li><strong>System Handover:</strong> Get user guide and documents for your battery.</li>
+              <li><strong>Ongoing Monitoring:</strong> Track battery efficiency and schedule service.</li>
+            </ol>
+          </div>
+          <Image
+            src="/assets/img/photos/installation.png"
+            alt="Battery Installation Process"
+            width={500}
+            height={400}
+            style={imageStyle}
+          />
+        </div>
+      </section>
 
       
       <Solarsection1 />
@@ -386,3 +346,4 @@ export default function SolarPlansPage() {
     </main>
   );
 }
+

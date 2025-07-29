@@ -12,12 +12,14 @@ const SolarBatterySection = () => {
     gridTemplateColumns: '1fr 1fr',
     alignItems: 'center',
     gap: '40px',
+    width: '100%',
+    boxSizing: 'border-box',
   };
 
   const headingStyle = {
     fontSize: '36px',
     fontWeight: '700',
-    color: '#080808ff', // orange
+    color: '#080808',
     marginBottom: '24px',
     lineHeight: 1.2,
   };
@@ -25,7 +27,7 @@ const SolarBatterySection = () => {
   const subheadingStyle = {
     fontSize: '28px',
     fontWeight: '700',
-    color: '#111010ff',
+    color: '#111010',
     margin: '60px 0 20px',
   };
 
@@ -43,8 +45,41 @@ const SolarBatterySection = () => {
 
   return (
     <section>
-      <div style={containerStyle}>
-        {/* Left Column */}
+      <style jsx>{`
+        @media (max-width: 1024px) {
+          .grid-container {
+            grid-template-columns: 1fr !important;
+            text-align: center;
+          }
+        }
+
+        @media (max-width: 768px) {
+          .grid-container {
+            padding: 40px 16px !important;
+            gap: 24px !important;
+          }
+
+          h2 {
+            font-size: 28px !important;
+          }
+
+          h3 {
+            font-size: 22px !important;
+          }
+
+          p {
+            font-size: 15px !important;
+          }
+        }
+
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+      `}</style>
+
+      {/* First Section */}
+      <div className="grid-container" style={containerStyle}>
         <div>
           <h2 style={headingStyle}>Solar battery storage systems</h2>
           <p style={paragraphStyle}>
@@ -63,28 +98,25 @@ const SolarBatterySection = () => {
           </p>
         </div>
 
-        {/* Right Column */}
         <div style={{ textAlign: 'center' }}>
           <Image
-            src="/assets/img/shape/sun.png" // replace with your actual path
+            src="/assets/img/shape/sun.png"
             alt="Battery Cartoon"
             width={300}
             height={300}
-            style={{ objectFit: 'contain' }}
+            style={{ objectFit: 'contain', maxWidth: '100%' }}
           />
         </div>
       </div>
 
       {/* Second Section */}
-      <div style={containerStyle}>
-        {/* Left Column */}
+      <div className="grid-container" style={containerStyle}>
         <div>
           <h3 style={subheadingStyle}>
             How does solar power work when the sun isn’t shining?
           </h3>
         </div>
 
-        {/* Right Column */}
         <div>
           <p style={paragraphStyle}>
             Solar panels require direct sunlight to produce solar energy. You’ll need to add a solar battery
