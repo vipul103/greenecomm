@@ -14,11 +14,11 @@ const menu_data = [
     title: 'About Us',
     link: '/about'
   },
-  {
-    id: 4,
-    title: 'Shop',
-    link: '/shop'
-  },
+  // {
+  //   id: 4,
+  //   title: 'Shop',
+  //   link: '/shop'
+  // },
   {
     id: 5,
     hasDropdown: true,
@@ -27,7 +27,7 @@ const menu_data = [
     submenus: [
       { title: 'Hot Water System', link: '/hotwater' },
       { title: 'Heating and Cooling System', link: '/ac' },
-      { title: 'Solar Panel', link: '/solar-panel' },
+      { title: 'Solar Panel and battery', link: '/solar-panel' },
     ]
   },
   {
@@ -39,14 +39,14 @@ const menu_data = [
       { title: 'FAQs', link: '/faq' },
       { title: 'Privacy & Policy', link: '/policy' },
       { title: 'Terms & Conditions', link: '/terms' },
-      { title: 'Login', link: '/login' },
-      { title: 'Register', link: '/register' },
-      { title: 'Forgot Password', link: '/forgot' },
-      { title: 'My Cart', link: '/cart' },
-      { title: 'My Wishlist', link: '/wishlist' },
-      { title: 'Checkout', link: '/checkout' },
+      // { title: 'Login', link: '/login' },
+      // { title: 'Register', link: '/register' },
+      // { title: 'Forgot Password', link: '/forgot' },
+      // { title: 'My Cart', link: '/cart' },
+      // { title: 'My Wishlist', link: '/wishlist' },
+      // { title: 'Checkout', link: '/checkout' },
       { title: 'Career', link: '/career' },
-      { title: 'Error 404', link: '/404' },
+      // { title: 'Error 404', link: '/404' },
     ]
   },
   {

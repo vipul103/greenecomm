@@ -79,7 +79,7 @@ const Footer = () => {
                   col_3="3"
                   title="Product"
                   contents={[
-                    { link: "/shop", title: "Shop" },
+                    // { link: "/shop", title: "Shop" },
                     { link: "/hotwater", title: "HotWater System" },
                     { link: "/ac", title: "Air Conditioner" },
                     { link: "/solar-panel", title: "Solar Panel" },
@@ -116,7 +116,7 @@ const Footer = () => {
                         <div className="footer__contact-mail">
                           <span>
                             <a href="mailto:support@harry.com">
-                              Info@wecansave.com.au
+                              support@greenenergypowerco.com
                             </a>
                           </span>
                         </div>

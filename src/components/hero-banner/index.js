@@ -134,7 +134,7 @@ import banner3 from "@assets/img/slider/banner4.jpg";
 const slider_data = [
   { id: 1, img: banner1, href: "/#" },
   { id: 2, img: banner2, href: "/shop" },
-  { id: 3, img: banner3, href: "/contact" },
+  // { id: 3, img: banner3, href: "/contact" },
 ];
 
 const overlayContent = [

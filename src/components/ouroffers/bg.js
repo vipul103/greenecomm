@@ -140,46 +140,95 @@ export default function SolarPlansPage() {
       </section>
 
       {/* Poster 1 Section */}
-      <section className="product-section">
-        <div className="container product-grid">
-          <Image
-            src="/assets/img/offers/offe1.png"
-            alt="Old gas-ducted system replacement"
-            width={500}
-            height={400}
-            className="rounded"
-            style={{ width: '100%', height: 'auto', maxWidth: '500px' }}
-          />
+     {/* Poster 1 Section - Solar Battery Offer with Video */}
+<section className="product-section">
+  <div className="container product-grid">
+    <video
+      src="/assets/img/icon/Video 2.mp4" // Make sure this video exists in your public folder
+      controls
+      width="100%"
+      style={{
+        borderRadius: '8px',
+        maxWidth: '500px',
+        height: 'auto',
+      }}
+    >
+      Your browser does not support the video tag.
+    </video>
 
+    <div>
+      <h3 className="offer-heading">🔋 Switch to Solar Batteries Under the VEU Program</h3>
+      <p className="mb-6 text-lg">
+        Take control of your energy use with solar battery storage. Save energy during the day and use it at night to reduce your bills and your carbon footprint.
+      </p>
+
+      <div className="mb-6">
+        <div className="offer-item">
+          <span className="offer-icon">✅</span>
+          <span>Government rebates available</span>
+        </div>
+        <div className="offer-item">
+          <span className="offer-icon">✅</span>
+          <span>Backup power during blackouts</span>
+        </div>
+        <div className="offer-item">
+          <span className="offer-icon">✅</span>
+          <span>Maximize your solar investment</span>
+        </div>
+      </div>
+
+      <div className="cta-buttons">
+        <a href="tel:1300785436" className="phone-btn">📞 1300 785 436</a>
+        <a href="https://greenenergypowerco.com" className="website-btn">🌐 greenenergypowerco.com</a>
+        <a href="mailto:contact@greenenergypowerco.com" className="email-btn">📩 contact@greenenergypowerco.com</a>
+      </div>
+    </div>
+  </div>
+</section>
+  <section className="product-section pb-10">
+        <div className="container product-grid">
           <div>
-            <h3 className="offer-heading">💨 Still using an old gas-ducted system?</h3>
+            <h3 className="offer-heading">🔄 Switch to a modern reverse cycle air conditioning system!</h3>
             <p className="mb-6 text-lg">
-              It's time to upgrade! Make the switch to an energy-efficient air conditioner today and enjoy massive savings. Thanks to the Victorian Energy Upgrades (VEU) program, you can receive up to $7000 in rebates.
+              Make your home more efficient and comfortable while claiming up to $7000 in rebates under the VEU program. Enjoy year-round temperature control.
             </p>
             
             <div className="mb-6">
               <div className="offer-item">
-                <span className="offer-icon">✅</span>
-                <span>Starting from $659 per unit</span>
+                <span className="offer-icon">💲</span>
+                <span>Affordable at $659 per unit</span>
               </div>
               <div className="offer-item">
-                <span className="offer-icon">✅</span>
-                <span>Claim your rebate now</span>
+                <span className="offer-icon">💸</span>
+                <span>Massive government rebates</span>
               </div>
               <div className="offer-item">
-                <span className="offer-icon">✅</span>
-                <span>Better comfort & lower energy bills</span>
+                <span className="offer-icon">🧑‍🔧</span>
+                <span>Hassle-free installation</span>
               </div>
             </div>
 
             <div className="cta-buttons">
               <a href="tel:1300785436" className="phone-btn">📞 1300 785 436</a>
+              <a href="mailto:support@greenenergypowerco.com" className="email-btn">💌 support@greenenergypowerco.com</a>
               <a href="https://greenenergypowerco.com" className="website-btn">🌐 greenenergypowerco.com</a>
-              <a href="mailto:contact@greenenergypowerco.com" className="email-btn">📩 contact@greenenergypowerco.com</a>
             </div>
           </div>
+          <video
+      src="/assets/img/icon/AC Video.mp4" // Make sure this video exists in your public folder
+      controls
+      width="100%"
+      style={{
+        borderRadius: '8px',
+        maxWidth: '500px',
+        height: 'auto',
+      }}
+    >
+      Your browser does not support the video tag.
+    </video>
         </div>
       </section>
+
 
       {/* Poster 2 Section */}
       <section className="product-section">
@@ -264,45 +313,6 @@ export default function SolarPlansPage() {
       </section>
 
       {/* Poster 4 Section */}
-      <section className="product-section pb-10">
-        <div className="container product-grid">
-          <div>
-            <h3 className="offer-heading">🔄 Switch to a modern reverse cycle air conditioning system!</h3>
-            <p className="mb-6 text-lg">
-              Make your home more efficient and comfortable while claiming up to $7000 in rebates under the VEU program. Enjoy year-round temperature control.
-            </p>
-            
-            <div className="mb-6">
-              <div className="offer-item">
-                <span className="offer-icon">💲</span>
-                <span>Affordable at $659 per unit</span>
-              </div>
-              <div className="offer-item">
-                <span className="offer-icon">💸</span>
-                <span>Massive government rebates</span>
-              </div>
-              <div className="offer-item">
-                <span className="offer-icon">🧑‍🔧</span>
-                <span>Hassle-free installation</span>
-              </div>
-            </div>
-
-            <div className="cta-buttons">
-              <a href="tel:1300785436" className="phone-btn">📞 1300 785 436</a>
-              <a href="mailto:support@greenenergypowerco.com" className="email-btn">💌 support@greenenergypowerco.com</a>
-              <a href="https://greenenergypowerco.com" className="website-btn">🌐 greenenergypowerco.com</a>
-            </div>
-          </div>
-          <Image
-            src="/assets/img/offers/offe4.png"
-            alt="Reverse cycle air conditioning"
-            width={500}
-            height={400}
-            className="rounded"
-            style={{ width: '100%', height: 'auto', maxWidth: '500px' }}
-          />
-        </div>
-      </section>
     </main>
   );
 }
