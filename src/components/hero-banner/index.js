@@ -116,120 +116,90 @@
 // };
 
 // export default HeroBanner;
+
 'use client';
+
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import Link from "next/link";            // ⬅️ NEW
 import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectFade, Autoplay } from "swiper/modules";
+import { Autoplay, EffectFade } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/effect-fade";
+import Image from "next/image";
+import banner1 from "@assets/img/slider/bg.png";
+import banner2 from "@assets/img/slider/new.jpg";
 
-import banner1 from "@assets/img/slider/banner1.jpg";
-import banner2 from "@assets/img/slider/banner2.jpg";
-import banner3 from "@assets/img/slider/banner4.jpg";
+const bannerImages = [banner1, banner2];
+const overlayContent = ["book solar battery now", "welcome to our website"];
 
-/**
- * Give each slide its own URL.  
- * Replace the values in `href` with whatever pages you need.
- */
-const slider_data = [
-  { id: 1, img: banner1, href: "/#" },
-  { id: 2, img: banner2, href: "/shop" },
-  // { id: 3, img: banner3, href: "/contact" },
-];
-
-const overlayContent = [
-  "Welcome to Our Website",
-  "Premium Quality Services",
-  "Exclusive Offers Just For You"
-];
-
-const HeroBanner = () => {
-  const [loop, setLoop] = useState(false);
+export default function HeroBanner() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    setLoop(true);
+    const handleResize = () => {
+      if (typeof window !== "undefined") {
+        setIsMobile(window.innerWidth < 768);
+      }
+    };
 
-    if (typeof window !== "undefined") {
-      const checkMobile = () => setIsMobile(window.innerWidth <= 768);
-      checkMobile();
-      window.addEventListener("resize", checkMobile);
-      return () => window.removeEventListener("resize", checkMobile);
-    }
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   return (
-    <section className="slider__area" style={{ overflow: "hidden" }}>
+    <div className="relative w-full overflow-hidden pt-[110px]">
       <Swiper
-        className="slider__active full-hero-slider"
-        slidesPerView={1}
-        spaceBetween={0}
+        modules={[Autoplay, EffectFade]}
         effect="fade"
-        loop={loop}
-        autoplay={{ delay: 4000 }}
-        modules={[EffectFade, Autoplay]}
+        slidesPerView={1}
+        loop
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
+        className="w-full"
       >
-        {slider_data.map((item, index) => (
-          <SwiperSlide key={item.id}>
-            {/* Wrap the whole slide in <Link>. 
-                passHref is automatic in Next 13+, so no need for passHref prop */}
-            <Link
-              href={item.href}
-              aria-label={`Go to ${overlayContent[index]}`} // improves accessibility
+        {bannerImages.map((item, index) => (
+          <SwiperSlide key={index}>
+            <div
+              className="relative w-full"
+              style={{ minHeight: "calc(100vh - 110px)", position: "relative" }}
             >
-              <div
+              <Image
+                src={item}
+                alt={overlayContent[index]}
+                fill
                 style={{
-                  width: "100%",
-                  maxWidth: "1920px",
-                  aspectRatio: isMobile ? "1 / 1.5" : "1920 / 800",
-                  margin: "0 auto",
-                  position: "relative",
-                  cursor: "pointer" // lets the user know it's clickable
+                  objectFit: "cover",
+                  objectPosition: "center",
                 }}
-              >
-                <Image
-                  src={item.img}
-                  alt={overlayContent[index]}
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: isMobile ? "cover" : "contain",
-                    objectPosition: isMobile ? "top center" : "center",
-                    display: "block",
-                  }}
-                  priority
-                />
+                priority
+              />
 
-                {/* Mobile-only overlay text */}
-                {isMobile && (
-                  <div
-                    style={{
-                      position: "absolute",
-                      top: "70%",
-                      left: "50%",
-                      transform: "translate(-50%, -50%)",
-                      color: "white",
-                      textAlign: "center",
-                      textShadow: "0 2px 4px rgba(0,0,0,0.5)",
-                      width: "100%",
-                      maxWidth: "90%",
-                      fontSize: "clamp(20px, 6vw, 32px)",
-                      fontWeight: 700,
-                      lineHeight: 1.3,
-                      padding: "0 10px",
-                      pointerEvents: "none" // text doesn’t block taps
-                    }}
-                  >
-                    {overlayContent[index]}
-                  </div>
-                )}
-              </div>
-            </Link>
+              {/* Only show overlay on mobile view */}
+               {isMobile && (
+                <div style={{
+                  position: "absolute",
+                  top: "70%",
+                  left: "50%",
+                  transform: "translate(-50%, -50%)",
+                  color: "white",
+                  textAlign: "center",
+                  textShadow: "0 2px 4px rgba(0,0,0,0.5)",
+                  width: "100%",
+                  maxWidth: "90%",
+                  fontSize: "clamp(20px, 6vw, 32px)",
+                  fontWeight: 700,
+                  lineHeight: 1.3,
+                  padding: "0 10px"
+                }}>
+                  {overlayContent[index]}
+                </div>
+              )}
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
-    </section>
+    </div>
   );
-};
-
-export default HeroBanner;
+}

@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import heroBg from '@assets/img/banner/bg2.jpg';
+import heroBg from '@assets/img/slider/banner7.png';
 import Solarsection1 from "@components/solar/solarsection1";
 import Solarsection2 from "@components/solar/solarsection2";
 import Solarsection3 from "@components/solar/solarsection3";
@@ -102,9 +102,9 @@ const plans = [
         <div style={{ maxWidth: '1200px', margin: '0 auto', padding: '0 20px' }}>
           <h1 style={{ fontSize: '2.5rem', fontWeight: 'bold', marginBottom: '1rem' }}>
             Revolutionize Your Home <br />
-            <span style={{ color: '#fde047' }}>Solar Panel and battery</span>
+            <span style={{ color: '#000000ff' }}>Solar Panel and battery</span>
           </h1>
-          <p style={{ fontSize: '1.2rem', marginBottom: '2rem', lineHeight: 1.6 }}>
+          <p style={{ color: '#fd0303ff',fontSize: '1.2rem', marginBottom: '2rem', lineHeight: 1.6 }}>
             Upgrade to modern, energy-efficient Solar Panel and battery. Save on bills while
             enjoying superior performance with government rebates.
           </p>
