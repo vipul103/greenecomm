@@ -28,19 +28,19 @@ const ShopFeature = () => {
           <div className="row">
             <SingleFeature
               icon={<ShippingCar />}
-              title="Free Shipping"
+              title="Fast Installation"
               subtitle={
                 <>
-                  Free Shipping for orders <br /> over $120
+                 Fast Installation  <br /> guaranteed by us
                 </>
               }
             />
             <SingleFeature
               icon={<Refund/>}
-              title="Refund"
+              title="Govt Rebate"
               subtitle={
                 <>
-                  Within 30 days for an <br /> exchange.
+                  save money <br /> get Govt Rebate .
                 </>
               }
             />
@@ -58,7 +58,7 @@ const ShopFeature = () => {
               title="Payment"
               subtitle={
                 <>
-                  Pay with Multiple Credit <br /> Cards
+                  Pay when <br /> Intallation is done
                 </>
               }
             />

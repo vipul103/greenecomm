@@ -12,7 +12,7 @@ const About = () => {
     <Wrapper>
       <Header style_2={true} />
       <AboutArea />
-      <ShopCta />
+      {/* <ShopCta /> */}
       <Footer />
     </Wrapper>
   );

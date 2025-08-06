@@ -77,7 +77,7 @@ const Footer = () => {
                   col="3"
                   col_2="3"
                   col_3="3"
-                  title="Product"
+                  title="Products"
                   contents={[
                     // { link: "/shop", title: "Shop" },
                     { link: "/hotwater", title: "HotWater System" },
@@ -105,17 +105,17 @@ const Footer = () => {
                     <div className="footer__widget-content">
                       <p className="footer__text">
                         Find a location nearest you. See{" "}
-                        <a href="https://www.google.com/maps/place/1%2F180+High+St,+Ashburton+VIC+3147,+Australia/@-37.8634627,145.0755281,858m/data=!3m2!1e3!4b1!4m6!3m5!1s0x6ad641db9edfd837:0xb1cf052bb13eac52!8m2!3d-37.863467!4d145.078103!16s%2Fg%2F11qpkkyc4k?entry=ttu&g_ep=EgoyMDI1MDQyOS4wIKXMDSoASAFQAw%3D%3D">Our Stores</a>
+                        <a href="https://maps.app.goo.gl/mVS48SXA3T7zJuE77">Our Stores</a>
                       </p>
                       <div className="footer__contact">
                         <div className="footer__contact-call">
                           <span>
-                            <a href="tel:624-423-26-72">+1300 685 958</a>
+                            <a href="tel:1300785436">1300785436</a>
                           </span>
                         </div>
                         <div className="footer__contact-mail">
                           <span>
-                            <a href="mailto:support@harry.com">
+                            <a href="support@greenenergypowerco.com">
                               support@greenenergypowerco.com
                             </a>
                           </span>

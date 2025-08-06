@@ -7,7 +7,7 @@ import Link from 'next/link';
 // Import your background image
 import bgPattern from '@assets/img/slider/banner7.png'; // Update with your actual path
 const brands = [
-  { name: 'Growatt', logo: '/assets/img/brand/growatt.png', href: '/shop?Category=solar-battery' },
+  { name: 'Growatt', logo: '/assets/img/brand/growatt.png', href: '/solar-panel' },
 ];
 
 

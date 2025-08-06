@@ -25,7 +25,7 @@ const About = () => {
       <Awards />
       {/* <AboutFaqs /> */}
       {/* <Teams /> */}
-      <Brands />
+      {/* <Brands /> */}
     </>
   );
 };

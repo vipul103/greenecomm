@@ -81,16 +81,16 @@ const FaqArea = ({ element_faq = false }) => {
                       title="General Questions"
                     />
                   </li>
-                  <li className="nav-item" role="presentation">
+                  {/* <li className="nav-item" role="presentation">
                     <NavItem
                       id="community"
                       icon={<DotsTwo />}
                       title="Community"
                     />
-                  </li>
-                  <li className="nav-item" role="presentation">
+                  </li> */}
+                  {/* <li className="nav-item" role="presentation">
                     <NavItem id="support" icon={<Support />} title="Support" />
-                  </li>
+                  </li> */}
                 </ul>
               </div>
             </div>
